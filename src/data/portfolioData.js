@@ -27,8 +27,8 @@ export const personalInfo = {
   phone: "+91 9535048508",                            // Fully editable
   githubUrl: "https://github.com/venkateshmalipatil222-oss",
   linkedinUrl: "https://linkedin.com/in/venkatesh-malipatil-266013380",
-  resumePath: "/Venkatesh_Malipatil_Resume.pdf",
-  avatarUrl: "/avatar.jpg",
+  resumePath: "./Venkatesh_Malipatil_Resume.pdf",
+  avatarUrl: "./avatar.jpg",
   openToWork: true,
   statusText: "Open to Placement & Software Developer Opportunities",
 
