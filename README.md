@@ -1,5 +1,16 @@
 # 🚀 Premium Personal Developer Portfolio — Venkatesh Malipatil (VNKY)
 
+<p align="center">
+  <img src="./public/preview.jpg" alt="Venkatesh Malipatil (VNKY) Portfolio UI Preview" width="100%" style="border-radius: 14px; box-shadow: 0 12px 35px rgba(0,0,0,0.6);" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/Vite-Fast_Build-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/VTU-CSE_Graduate-10B981?style=for-the-badge" alt="VTU" />
+</p>
+
 A modern, responsive, high-performance developer portfolio website designed for a Computer Science Engineering graduate targeting roles as a **Python Developer** or **Full Stack Developer**.
 
 Built with **React.js**, **Tailwind CSS**, and **Vite**, featuring a dark-first aesthetic, rich typography, interactive modal previews, real-time contact validation, and centralized data management.
@@ -29,6 +40,7 @@ Built with **React.js**, **Tailwind CSS**, and **Vite**, featuring a dark-first 
 PORTFOLIO/
 ├── public/
 │   ├── avatar.jpg                     # Profile image
+│   ├── preview.jpg                    # Full UI preview screenshot for GitHub README
 │   ├── favicon.svg                    # Custom VNKY brand favicon
 │   └── Venkatesh_Malipatil_Resume.pdf # Downloadable resume PDF
 ├── src/
