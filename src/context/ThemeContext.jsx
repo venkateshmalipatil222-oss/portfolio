@@ -5,7 +5,7 @@ const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   // Default to dark mode as requested in prompt ("Modern dark-themed interface")
   const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem('v3nkey_portfolio_theme');
+    const saved = localStorage.getItem('vnky_portfolio_theme') || localStorage.getItem('v3nkey_portfolio_theme');
     return saved ? saved : 'dark';
   });
 
@@ -18,7 +18,7 @@ export const ThemeProvider = ({ children }) => {
       root.classList.add('light');
       root.classList.remove('dark');
     }
-    localStorage.setItem('v3nkey_portfolio_theme', theme);
+    localStorage.setItem('vnky_portfolio_theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {

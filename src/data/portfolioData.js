@@ -1,7 +1,7 @@
 /**
  * =========================================================================
  * PORTFOLIO DATA CONFIGURATION
- * Venkatesh Malipatil (V3NKEY)
+ * Venkatesh Malipatil (VNKY)
  * 
  * Edit any field in this file to update your portfolio website instantly!
  * =========================================================================
@@ -9,7 +9,7 @@
 
 export const personalInfo = {
   name: "Venkatesh Malipatil",
-  displayName: "V3NKEY",
+  displayName: "VNKY",
   title: "Python Developer | Full Stack Developer",
   animatedRoles: [
     "Python Developer",

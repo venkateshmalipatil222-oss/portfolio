@@ -1,4 +1,4 @@
-# 🚀 Premium Personal Developer Portfolio — Venkatesh Malipatil (V3NKEY)
+# 🚀 Premium Personal Developer Portfolio — Venkatesh Malipatil (VNKY)
 
 A modern, responsive, high-performance developer portfolio website designed for a Computer Science Engineering graduate targeting roles as a **Python Developer** or **Full Stack Developer**.
 
@@ -29,7 +29,7 @@ Built with **React.js**, **Tailwind CSS**, and **Vite**, featuring a dark-first 
 PORTFOLIO/
 ├── public/
 │   ├── avatar.jpg                     # Profile image
-│   ├── favicon.svg                    # Custom V3NKEY brand favicon
+│   ├── favicon.svg                    # Custom VNKY brand favicon
 │   └── Venkatesh_Malipatil_Resume.pdf # Downloadable resume PDF
 ├── src/
 │   ├── assets/                        # Static icons and assets
@@ -103,7 +103,7 @@ All information on the website is centralized in one easy-to-edit configuration 
 👉 **`src/data/portfolioData.js`**
 
 Open this file to customize:
-* **Personal Info**: Name, alias (`V3NKEY`), tagline, status badge, avatar.
+* **Personal Info**: Name, alias (`VNKY`), tagline, status badge, avatar.
 * **Education**: College name (`K.N.S Institute of Technology`), university (`VTU`), graduation year (`2025`), and CGPA (`8.59`).
 * **Contact Details**: Email (`venkateshmalipatil188@gmail.com`), LinkedIn URL, GitHub profile.
 * **Technical Skills**: Add, edit, or adjust proficiency badges and framework tags.
@@ -139,7 +139,7 @@ Open this file to customize:
    * **Root Directory**: `./`
    * **Build Command**: `npm run build`
    * **Output Directory**: `dist`
-7. Click **"Deploy"**. Vercel will build and assign you a free production URL (e.g., `v3nkey-portfolio.vercel.app`) with automatic SSL and continuous deployment!
+7. Click **"Deploy"**. Vercel will build and assign you a free production URL (e.g., `vnky-portfolio.vercel.app`) with automatic SSL and continuous deployment!
 
 ### Method B: Deploy using Vercel CLI
 1. Install Vercel CLI globally:
@@ -160,7 +160,7 @@ Open this file to customize:
 
 ## 👨‍💻 Author
 
-* **Venkatesh Malipatil (V3NKEY)**
+* **Venkatesh Malipatil (VNKY)**
 * **Email**: [venkateshmalipatil188@gmail.com](mailto:venkateshmalipatil188@gmail.com)
 * **GitHub**: [@venkateshmalipatil222-oss](https://github.com/venkateshmalipatil222-oss)
 * **LinkedIn**: [venkatesh-malipatil](https://linkedin.com/in/venkatesh-malipatil-266013380)

@@ -243,7 +243,7 @@ export const Hero = ({ onOpenResume }) => {
                   <div className="flex items-center justify-between text-[11px] text-slate-400 mb-2">
                     <span className="flex items-center gap-1.5 text-cyan-400">
                       <Terminal className="w-3.5 h-3.5 text-indigo-400" />
-                      <span>v3nkey@engineer:~</span>
+                      <span>vnky@engineer:~</span>
                     </span>
                     <span className="text-emerald-400">Ready for Deployment</span>
                   </div>
