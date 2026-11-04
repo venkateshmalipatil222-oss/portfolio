@@ -181,113 +181,91 @@ export const Hero = ({ onOpenResume }) => {
 
           </div>
 
-          {/* Right Column: Avatar & Interactive Terminal Card */}
+          {/* Right Column: Prominent Portrait & Developer Console */}
           <div className="lg:col-span-5 flex flex-col items-center">
             
-            {/* Interactive Terminal Window */}
-            <div className="w-full max-w-md rounded-2xl glass-panel shadow-2xl shadow-indigo-950/30 overflow-hidden border border-slate-800 dark:border-slate-800 light:border-slate-200">
-              
-              {/* Terminal Titlebar */}
-              <div className="px-4 py-3 bg-slate-900/90 dark:bg-slate-900/90 light:bg-slate-100 border-b border-slate-800 dark:border-slate-800 light:border-slate-200 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-rose-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-                </div>
-                <div className="flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-400 light:text-slate-600">
-                  <Terminal className="w-3.5 h-3.5 text-indigo-400" />
-                  <span>v3nkey@engineer:~</span>
-                </div>
-                <div className="w-10"></div>
-              </div>
+            <div className="w-full max-w-md relative group">
+              {/* Decorative ambient gradient backdrop */}
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-indigo-500 via-cyan-400 to-purple-500 rounded-3xl blur-xl opacity-40 group-hover:opacity-70 transition duration-500 -z-10" />
 
-              {/* Developer Profile Header inside Card */}
-              <div className="p-5 pb-3 flex items-center gap-4 bg-slate-950/40 dark:bg-slate-950/40 light:bg-slate-50/50 border-b border-slate-800/60 dark:border-slate-800/60 light:border-slate-200">
-                <div className="relative group">
-                  <div className="w-16 h-16 rounded-2xl overflow-hidden ring-2 ring-indigo-500/50 p-0.5 bg-gradient-to-tr from-indigo-500 via-cyan-400 to-purple-500 shadow-md">
-                    <img 
-                      src={personalInfo.avatarUrl} 
-                      alt={personalInfo.name} 
-                      className="w-full h-full object-cover rounded-[14px]"
-                      onError={(e) => {
-                        // Fallback avatar icon if image not found
-                        e.target.style.display = 'none';
-                        e.target.parentElement.innerHTML = '<div class="w-full h-full bg-slate-900 flex items-center justify-center font-bold text-cyan-400 text-lg">VK</div>';
-                      }}
-                    />
+              {/* Main Profile Showcase Card */}
+              <div className="w-full rounded-3xl glass-panel shadow-2xl overflow-hidden border border-slate-800 dark:border-slate-800 light:border-slate-200">
+                
+                {/* Large Portrait Showcase */}
+                <div className="relative w-full h-84 sm:h-96 overflow-hidden bg-slate-950">
+                  <img 
+                    src={personalInfo.avatarUrl} 
+                    alt={personalInfo.name} 
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.parentElement.innerHTML = '<div class="w-full h-full bg-slate-900 flex items-center justify-center font-bold text-cyan-400 text-2xl">VK</div>';
+                    }}
+                  />
+                  {/* Subtle gradient vignette at bottom */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1d] via-transparent to-transparent opacity-95" />
+
+                  {/* Badges Overlaid on Photo */}
+                  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-2">
+                    <div className="px-3.5 py-1.5 rounded-full bg-slate-900/90 backdrop-blur-md border border-slate-700/80 text-white text-xs font-semibold flex items-center gap-2 shadow-lg">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                      <span>Available for Hire</span>
+                    </div>
+                    <div className="px-3 py-1.5 rounded-full bg-indigo-600/90 backdrop-blur-md text-white text-xs font-bold font-mono shadow-lg">
+                      VTU • 8.59 CGPA
+                    </div>
                   </div>
-                  <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-500 ring-2 ring-slate-900" title="Active"></span>
                 </div>
-                <div>
-                  <h3 className="text-base font-bold text-white dark:text-white light:text-slate-900 flex items-center gap-1.5">
-                    {personalInfo.name}
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400" />
-                  </h3>
-                  <p className="text-xs text-indigo-400 font-medium">
-                    {personalInfo.careerGoal}
-                  </p>
-                  <p className="text-[11px] text-slate-400 font-mono mt-0.5">
-                    VTU (CSE) • CGPA 8.59
-                  </p>
-                </div>
-              </div>
 
-              {/* Code Snippet in Terminal */}
-              <div className="p-5 font-mono text-xs leading-relaxed text-slate-300 dark:text-slate-300 light:text-slate-800 bg-[#090e1b] dark:bg-[#090e1b] light:bg-slate-100/90 overflow-x-auto">
-                <div className="text-slate-500 select-none">// Developer Profile Model</div>
-                <div>
-                  <span className="text-purple-400">const</span>{' '}
-                  <span className="text-cyan-300">developer</span> = &#123;
+                {/* Developer Profile Header */}
+                <div className="p-5 pb-3 bg-slate-950/60 dark:bg-slate-950/60 light:bg-slate-50/80 border-t border-slate-800/80 dark:border-slate-800/80 light:border-slate-200 flex items-center justify-between">
+                  <div>
+                    <h3 className="text-base font-bold text-white dark:text-white light:text-slate-900 flex items-center gap-1.5">
+                      {personalInfo.name}
+                      <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+                    </h3>
+                    <p className="text-xs text-indigo-400 font-medium">
+                      {personalInfo.careerGoal}
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <span className="text-[11px] font-mono text-cyan-400 block font-semibold">
+                      @{personalInfo.displayName}
+                    </span>
+                    <span className="text-[10px] text-slate-400 block">
+                      Bengaluru / Karnataka
+                    </span>
+                  </div>
                 </div>
-                <div className="pl-4">
-                  <span className="text-slate-400">name:</span>{' '}
-                  <span className="text-amber-300">"{personalInfo.name}"</span>,
-                </div>
-                <div className="pl-4">
-                  <span className="text-slate-400">alias:</span>{' '}
-                  <span className="text-amber-300">"{personalInfo.displayName}"</span>,
-                </div>
-                <div className="pl-4">
-                  <span className="text-slate-400">education:</span>{' '}
-                  <span className="text-amber-300">"B.E. CSE @ VTU"</span>,
-                </div>
-                <div className="pl-4">
-                  <span className="text-slate-400">coreTech:</span> [
-                  <span className="text-emerald-400">"Python"</span>,{' '}
-                  <span className="text-emerald-400">"FastAPI"</span>,{' '}
-                  <span className="text-emerald-400">"React"</span>,{' '}
-                  <span className="text-emerald-400">"MySQL"</span>],
-                </div>
-                <div className="pl-4">
-                  <span className="text-slate-400">openToOpportunities:</span>{' '}
-                  <span className="text-indigo-400">true</span>
-                </div>
-                <div>&#125;;</div>
-                <div className="mt-3 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
-                  <span className="flex items-center gap-1.5 text-emerald-400">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                    Ready for Deployment
-                  </span>
-                  <span className="text-slate-500">UTF-8 • JavaScript</span>
-                </div>
-              </div>
 
-              {/* Floating Skill Badges */}
-              <div className="p-4 bg-slate-900/60 dark:bg-slate-900/60 light:bg-slate-50/80 border-t border-slate-800/80 flex flex-wrap gap-2 justify-center">
-                <span className="px-2.5 py-1 rounded-lg bg-indigo-500/15 text-indigo-300 border border-indigo-500/30 text-[11px] font-medium">
-                  🐍 Python 3.13
-                </span>
-                <span className="px-2.5 py-1 rounded-lg bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 text-[11px] font-medium">
-                  ⚡ FastAPI & Flask
-                </span>
-                <span className="px-2.5 py-1 rounded-lg bg-blue-500/15 text-blue-300 border border-blue-500/30 text-[11px] font-medium">
-                  ⚛️ React.js
-                </span>
-                <span className="px-2.5 py-1 rounded-lg bg-amber-500/15 text-amber-300 border border-amber-500/30 text-[11px] font-medium">
-                  🐬 MySQL
-                </span>
-              </div>
+                {/* Interactive Terminal Bar */}
+                <div className="px-5 py-3 bg-[#080d19] dark:bg-[#080d19] light:bg-slate-100 border-t border-slate-800/80 font-mono text-xs">
+                  <div className="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+                    <span className="flex items-center gap-1.5 text-cyan-400">
+                      <Terminal className="w-3.5 h-3.5 text-indigo-400" />
+                      <span>v3nkey@engineer:~</span>
+                    </span>
+                    <span className="text-emerald-400">Ready for Deployment</span>
+                  </div>
+                  
+                  {/* Floating Skill Badges */}
+                  <div className="flex flex-wrap gap-1.5 pt-1 justify-center">
+                    <span className="px-2.5 py-1 rounded-lg bg-indigo-500/15 text-indigo-300 border border-indigo-500/30 text-[11px] font-medium">
+                      🐍 Python
+                    </span>
+                    <span className="px-2.5 py-1 rounded-lg bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 text-[11px] font-medium">
+                      ⚡ FastAPI & Flask
+                    </span>
+                    <span className="px-2.5 py-1 rounded-lg bg-blue-500/15 text-blue-300 border border-blue-500/30 text-[11px] font-medium">
+                      ⚛️ React.js
+                    </span>
+                    <span className="px-2.5 py-1 rounded-lg bg-amber-500/15 text-amber-300 border border-amber-500/30 text-[11px] font-medium">
+                      🐬 MySQL
+                    </span>
+                  </div>
+                </div>
 
+              </div>
             </div>
 
           </div>

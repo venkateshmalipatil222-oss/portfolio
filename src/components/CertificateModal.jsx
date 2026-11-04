@@ -150,3 +150,4 @@ export const CertificateModal = ({ cert, fileData, onClose }) => {
     </div>
   );
 };
+

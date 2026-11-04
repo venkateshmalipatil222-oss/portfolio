@@ -288,3 +288,4 @@ export const certifications = [
     fileUrl: null
   }
 ];
+

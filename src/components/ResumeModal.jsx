@@ -93,16 +93,25 @@ export const ResumeModal = ({ isOpen, onClose }) => {
           
           {/* Resume Header */}
           <div className="border-b border-slate-800/80 dark:border-slate-800/80 light:border-slate-300 pb-6 text-center sm:text-left flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div>
-              <h1 className="text-3xl font-extrabold text-white dark:text-white light:text-slate-900">
-                {personalInfo.name}
-              </h1>
-              <p className="text-sm font-semibold text-cyan-400 dark:text-cyan-400 light:text-indigo-600 mt-1">
-                {personalInfo.careerGoal} • Computer Science and Engineering
-              </p>
-              <p className="text-xs text-slate-400 mt-0.5">
-                {personalInfo.university}
-              </p>
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden ring-2 ring-indigo-500/40 shrink-0 bg-slate-900 shadow-md">
+                <img 
+                  src={personalInfo.avatarUrl} 
+                  alt={personalInfo.name} 
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div>
+                <h1 className="text-2xl sm:text-3xl font-extrabold text-white dark:text-white light:text-slate-900">
+                  {personalInfo.name}
+                </h1>
+                <p className="text-sm font-semibold text-cyan-400 dark:text-cyan-400 light:text-indigo-600 mt-0.5">
+                  {personalInfo.careerGoal} • Computer Science and Engineering
+                </p>
+                <p className="text-xs text-slate-400 mt-0.5">
+                  {personalInfo.university}
+                </p>
+              </div>
             </div>
 
             <div className="text-xs space-y-1 text-slate-400 dark:text-slate-400 light:text-slate-600 text-center sm:text-right">
